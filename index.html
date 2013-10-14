@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Responsive Web Design: Concepts, Techniques, Going Forward</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Kevin Reiss">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+  
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+        <h1>Responsive Web Design</h1>
+          <h2>Concepts and Tools</h2>
+          <br/>
+					<h3>October 11, 2013 - METRO Mobile Computing SIG</h3>
+					<p>
+						<small>Kevin Reiss <a href="http://twitter.com/kevinreiss">@kevinreiss</a></small>
+					</p>
+          </section>
+          <section>
+          <h2>Who am I?</h2>
+          <p class="fragment small">Currently at <a href="http://library.princeton.edu/">Princeton Univeristy Library</a></p>
+            <p class="fragment small">Web Developer / Designer</p>
+            <p class="fragment small">Many Years as a Systems Librarian</p>
+            </section>
+            <section>
+            <section>
+            <h2>Responsive is A New(ish) Approach to Web Design</h2>
+            <ol>
+              <li class="fragment">It will give your content strategy a new focus
+              <li class="fragment">It's cost effective: no need for a seperate mobile application
+              <li class="fragment">Front End Web Development is Changing Faster than ever before
+              <li class="fragment">The technology stack required responsive is the tip of the iceberg
+            </ol>  
+            </section>
+            <section>
+            <p>First a Word about the Web</p>
+            </section>
+            <section>
+            <img src="images/01-650x487.png" />
+             <p class="small"><a href="http://bradfrostweb.com/blog/web/responsive-web-design-missing-the-point/">Courtesy of Brad Frost</a></p>
+            </section>
+            <section>
+            <img src="images/02-650x487.png" />
+             <p class="small"><a href="http://bradfrostweb.com/blog/web/responsive-web-design-missing-the-point/">Courtesy of Brad Frost</a></p>
+            </section>
+            <section>
+          <img src="images/03-650x487.png" />
+             <p class="small"><a href="http://bradfrostweb.com/blog/web/responsive-web-design-missing-the-point/">Courtesy of Brad Frost</a></p>
+             </section>
+              <section>
+          <h1>The Web is Fluid</h1>
+          <p class="fragment">It needs a new approach..</p>
+          <blockquote class="fragment">
+            ...it also requires a different way of thinking. Rather than quarantining our content into disparate, device-specific experiences, we can use media queries to progressively enhance our work within different viewing contexts. 
+          </blockquote>
+          <p class="fragment small"><a href="http://alistapart.com/article/responsive-web-design">Ethan Marcotte</a></p>
+  
+          </section>
+             <section>
+             <h2>The Main Idea</h2>
+             <p class="fragment"p>We need to embrace uncertainity</p>
+             <blockquote clas="fragment">The point of creating adaptive sites is to create functional (and hopefully optimal) user experiences for a growing number of 
+               web-enabled devices and contexts.</blockquote>
+              <p class="small fragment"><a href="http://bradfrostweb.com/blog/web/responsive-web-design-missing-the-point/">Courtesy of Brad Frost</a></p>
+             </section>
+          <section>
+          <h2>What's the Opposite of Uncertainty?</h2>
+          </section>
+          <section>
+          <h2>A picture of a webpage</h2>
+             <img src="images/redesign-prototype-1.jpg" />
+             </section>
+             <section>
+             <h2>Built With Photoshop</h2>
+               <img src="images/photoshop.png" />
+               </section>
+               <section>
+               <p class="fragment">This is how Print Design Works</p>
+               <p class="fragment">This is how a lot of Web Design Still Works</p>
+               <p class="fragment">This is bad..</p>
+               </section>
+               <section>
+               <h2>For Three Groups:</h2>
+               <ol>
+                  <li class="fragment">Developers - who need to translate it into HTML/CSS.</li>
+                  <li class="fragment">Content Strategists/Site Managers - who get locked into a rigid mindset and want to fill up all that space.</li>
+                  <li class="fragment">For Administrators - who expect it to look exactly like the picture.</li>
+                </ol>
+               </section>
+            </section>
+            <section>
+            <h2>Actually this discussion has been going on awhile...</h2>
+              <blockquote class="fragment">The web’s greatest strength, I believe, is often seen as a limitation, as a defect. It is the nature of the web to be flexible, and it should be our role as designers and developers to embrace this flexibility, and produce pages which, by being flexible, are accessible to all.
+              </blockquote>
+              <p class="fragment"><a href="http://alistapart.com/article/dao">The Dao of Web Desgin</a> - John Alsop, 2000</p>
+              </section>
+              <section>
+                <p>What can we do about this?</p>
+              </section>
+    <section>
+    <h2>Never Open Photoshop Again and do the following</h2>
+    <ul>
+      <li class="fragment"><a href="http://kyleledbetter.com/why-i-design-in-the-browser/">Design in the Browser</a></li>
+       <li class="fragment">Get back to your technical roots</li>
+       <li class="fragment">Build sites using estabilished, common user interface patterns</li>
+       <li class="fragment">Convention over configuration</li>
+       <li class="fragment">Focus on what is unique about your organization</li>
+</ul>
+  </section>
+  <section data-markdown>
+         	<script type="text/template">
+            ##The New Photoshop
+
+            ```
+<html>
+  <head>
+    <title>Sample Zen Grid</title>
+      <link type="text/css" rel="stylesheet" href="../stylesheets/styles.css"/>
+  </head>
+  <body>
+    <header>
+    <nav>
+      <li>Awesome Nav Item</li>
+      </nav>
+    </header
+    <article>
+      <p>Awesome Content</p>
+    </article>
+    <aside class="related-content">
+    </aside>
+  </body
+</html>
+
+```
+</script>
+</section>
+<section>
+<h2>One side benefit:</h2>
+
+<p>The new Photoshop is a lot cheaper than the old one.</p>
+</section>
+<section>
+<p class="fragment">However, some assembly is required. This photoshop will require to use the command line to work effectively.</p>
+<p class="fragment">You will want to use a computing platform where it is easy to install <b>nodejs</b> and <b>ruby</b>.</p>
+<p class="fragment">Hint: <b>neither</b> of those is fun on Windows</p>
+</section>
+</section>
+  <section data-markdown>  
+## Give Up On Idea of Being Pixel Perfect
+
+   * Build sites and content models to be [Future Friendly](http://futurefriend.ly/)
+   * You don't know what tomorrow's devices will be.
+   * But you will want your data to be able to adapt to them.
+   * Going responsive is an opportunity to focus on what is most important to your organization
+   </section>
+   <section data-markdown>
+   ## Some Technical Things to Keep in Mind
+
+   * When in doubt use a CSS pre-processor: sass or less
+   * What's good for responsive can be good for preformance 
+   * Responsive websites are generally fast and lightweight
+   * 90% of a page load happens on the front end after the server has delivered the content
+   </section>
+     <section data-markdown>
+## Finally, Some Examples 
+
+1. [News](http://www.npr.org/2011/01/20/133053436/brain-injuries-haunt-football-players-years-later)
+2. [Web Design Shops](http://www.senseslab.com/)
+3. Drupal 8 - Including the Admin Interface
+4. Wordpress - default 2013 theme is responsive
+</section>
+<section data-markdown>
+## More Examples
+
+1. [Academic Libraries](http://clio.columbia.edu/)
+2. [Public Libraries](http://www.nypl.org/)
+3. [Technology Conferences](http://2013.badcamp.net/)
+4. [News & Media](http://pri.org/) - Menu, Media examples
+
+</section>
+<section>
+<h2>What's Missing?</h2>
+<p>The big e-commerce sites haven't necessary caught on yet - titling
+towards highly information sites.</p>
+
+</section>
+
+        <section>
+          <h2>The Responsive Web - Getting Started</h2>
+          <ul>
+            <li class="fragment">Meet the Challenge of the Uncertain Web</li>
+            <li class="fragment">Your Content is Now Mobile. - <a href="http://alistapart.com/article/your-content-now-mobile">Karen McGrane</a></li>
+            <li class="fragment"><a href="https://portland2013.drupal.org/keynote/karen-mcgrane">Listen to her Drupalcon Keynote</a></li>
+            <ul class="fragment">
+                <li>This talk could be a librarian's manifesto</li>
+                <li>The key to mobile is a <a href="http://www.abookapart.com/products/content-strategy-for-mobile">consistent content strategy combined with structured data</a></li>
+            </ul>
+            </li>
+         </ul>
+
+         </section>
+         <section data-markdown>
+          ## A few words about content strategy
+
+  ### [Be Mobile First](http://www.lukew.com/resources/mobile_first.asp) - Luke Wroblewski 
+  </section>
+  <section>
+  <h2>What do you users really come to your site for?</h2>
+  <ul>
+    <li class="fragment">Technical Troubleshooting?</li>
+    <li class="fragment">Research Help?</li>
+    <li class="fragment">Connect to subscription resources?</li>
+    <li class="fragment">Renew/Request a Book?</li>
+ </ul>
+   </section>
+  <section>
+  <h2>Things they don't come for</h2>
+  <ul>
+    <li class="fragment">A giant carousel filled with.. something</li>
+    <li class="fragment">Stock images of smiling patrons or your library shelves</li>
+    <li class="fragment">A link to every single other page on your website</li>
+  </ul>
+  </section>
+  <section>
+    <h2>Do Not Forget</h2>
+    <blockquote class="fragment">
+      If people want to do something on the internet, they will want to do it using their mobile device. Period.
+    </blockquote>
+    <p class="small fragment"><a href="http://alistapart.com/article/your-content-now-mobile">Karen McGrane</a></p>
+    <p class="fragment">Don't take away parts of your core service to meet the goal of going responsive.</p>
+    </section>
+  <section>
+  <section>
+  <h2>Foundational Responsive Technologies</h2>
+  </section>
+         <section data-markdown>
+         ## HTML5 
+* The W3C replacement for XHTML
+* Introduces new semantic HTML elements such as section, aside, nav, footer
+* [The Video Tag](http://www.html5rocks.com/en/tutorials/video/basics/)
+* New semantics can help you and (and your device) organize your responsive strategy
+* Don't forget to check for compatibility: [Can I Use?](http://caniuse.com/)
+* Allows for "[data](http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/all-you-need-to-know-about-the-html5-data-attribute/)" attributes, a convention for including local sematics in your html page 
+</section>
+<section>
+<h2>CSS 3</h2>
+<ul>
+  <li>Media Queries</li>
+  <li>Web Fonts - See <a href="http://www.google.com/fonts">Google Fonts</a></li>
+  <li>Gradients, Rounded Corners</li>
+</ul>
+</section>
+     <section data-markdown>
+     ## Javascript
+     * Provides a bridge for older tools to use HTML5 & CSS3 constructs (selectivzr, modernizr, respond.js)
+     * Most responsive menu techiques require it.
+     * Use only what you need
+     * Avoid page bloat 
+         </section>
+         </section>
+         <section>
+         <section>
+          <h2>The Three Basics Construct of Responsive Design</h2>
+          <p>As defined by <a href="http://www.abookapart.com/products/responsive-web-design">Ethan Marcotte</a></p>
+          <ol>
+            <li>A Fluid Grid</li>
+            <li>Fluid Media</li>
+            <li>Media Queries</li>
+          </ol>
+
+          </section>
+          <section data-markdown>
+          ## Grids
+1. [An abstraction that divides the page up into discrete, nested regions](http://foundation.zurb.com/grid.php) 
+2. First there was the Static Grid [960.gs](http://960.gs/)
+3. The Fluid Grid - A grid that expands to fit the current screen width
+4. [Semantic Grids](http://snugug.github.io/responsive-grids/#/responsive-grids-display)
+</section>
+
+<section>
+<h2>Getting Started with Grids</h2>
+
+<p class="fragment">Two are wildly popular</p>
+<ol>
+  <li class="fragment"><a href="http://getbootstrap.com">Bootstrap</a> - Now Defaults to "Mobile" first</li>
+  <li class="fragment"><a href="http://foundation.zurb.com/">Foundation</a></li>
+</ol>
+
+<p class="fragment">These Are:</p>
+<ul>
+  <li class="fragment">Great for rapid prototyping</li>
+  <li class="fragment">Provide common web design elements</li>
+</ul>
+</section>
+<section data-markdown>
+
+
+<script type="text/template">
+  ```
+  <div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+  <div class="col-xs-6 col-sm-6 col-md-4">.col-xs-6 .col-sm-6 .col-md-4</div>
+</div>
+<div class="row">
+  <div class="col-xs-6 col-sm-4 col-md-4">.col-xs-6 .col-sm-4 .col-md-4</div>
+  <div class="col-xs-6 col-sm-4 col-md-4">.col-xs-6 .col-sm-4 .col-md-4</div>
+  <!-- Optional: clear the XS cols if their content doesn't match in height -->
+  <div class="clearfix visible-xs"></div>
+  <div class="col-xs-6 col-sm-4 col-md-4">.col-xs-6 .col-sm-4 .col-md-4</div>
+</div>
+```
+</script>
+</section>
+<section>
+<h2>A Couple Complaints About These Systems</h2>
+<ul>
+  <li>One complaint: these can become constraining and "Overclassed"</li>
+  <li>They can result in cookie cutter sites - sometimes that's okay</li>
+  <li><a href="http://snugug.github.io/responsive-grids/">Review the complaints</a></li>
+</ul>
+</section>
+<section data-markdown>
+
+## Others Advocate for a Sematic Grid
+
+   * A semantic Grid (html5/CSS3 over span-xxx div-cccc) 
+   * [Susy](http://susy.oddbird.net/)
+   * [Zen Grids](http://zengrids.com/)
+   * [Singularity](http://singularity.gs/)
+   * These play best when using SASS
+</section>
+   <section data-markdown>
+   <script type="text/template">
+     ```
+<header>
+    <div id="logo"></div>
+    <h1>Grids Without Limits</h1>
+    <div id="slogan">Semantic Responsive Grids</div>
+      <nav role="navigation">
+        <ul class="menu">
+          <li>Two Options</li>
+          <li>Three Options</li>
+        </ul>
+     </nav>
+</header>
+<article class="content">
+  <h1>Awesome Article</h1>
+  <p>The main content. We like semantic HTML ordering.</p>
+  <p>Tha main content. We like semantic HTML ordering.</p>
+</article>
+<aside class="rel-content">
+   <ul>
+     <li>An aside.</li>
+     <li>point three</li>
+   </ul>
+</aside>
+   <aside class="service-connect">
+   <button class="blue">
+      Another aside Button
+   </button>
+</aside>
+<footer class="help-info">
+   <p>A footer.</p>
+</footer>
+<footer class="contact-info">
+  <p>Another footer.</p>
+</footer>
+```     
+   </script>
+   </section>
+   <section data-markdown>
+   ## Fluid Media
+   1. 100% Width/Height: Auto
+   2. Best Strategy for Now
+   3. Flexible is the least mature of responsive tools
+   </section>
+   <section data-markdown>
+   <script type="text/template">
+     ```
+     img, video, embed, object {
+       height: auto;
+       max-width: 100%;
+     }
+     ```
+   </script>
+
+</section>
+   <section data-markdown>
+   ## Media Queries
+* Apply a different set of CSS rules based on screen size
+* Operates on: Min/Max Widths
+* Orientation: Landscape v. Portrait
+* You use them to invoke "breakpoints" - the point at which your content "responds"
+* [Example - See the lower righthand corner](http://pul-testbed.princeton.edu/)
+* To invoke them you can use generally accepted [defaults](http://twbs.github.io/bootstrap/css/#grid)
+* Or - [build your own](http://breakpoint-sass.com/) 
+</section>
+
+<section>
+<h2>The Standard Media Query Strategy</h2>
+<ol>
+<li class="fragment">One base default media Query (In Bootstrap it's the smallest size)</li>
+<li class="fragment">Styles to be applied when matched by different media queries are wrapped within that query</li>
+<li class="fragment">Can get rather unwieldy on large projects with a lot of overrides.</li>
+</ol>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+  ```
+/* Extra small devices (phones, up to 480px) */
+/* No media query since this is the default in Bootstrap */
+body { ... }
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px; ) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px; ) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px; ) and ( max-width:1700px; ) { ... }
+
+/* Super Huge Screens */
+@media (min-width: 1800px;) { ... }
+  ```
+
+</script>
+
+</section>
+<section>
+<h2>Tool Time</h2>
+</section>
+<section>
+<p><a href="http://twbs.github.io/bootstrap/components/">Bootstrap Example</a></p>
+</section>
+<section data-markdown>
+## Bootstrap Gives You:
+
+* Grid
+* Components
+* Ready made in-browser wireframes
+* Roll your own colors and themes
+* Directly in the web's language
+</section>
+<section>
+<p><a href="http://foundation.zurb.com/templates.php">Foundation</a></p>
+</section>
+<section>
+<h2>Other Important Tools</h2>
+<p>Utilites that help you cope in the mobile web.</p>
+</section>
+
+<section>
+<h2><a href="http://necolas.github.io/normalize.css/">Normalize.css</a></h2>
+<p>Resets for the modern web. Used by many common responsive grid systems</p>
+</section>
+<section>
+<h2><a href="http://modernizr.com/">Modernizr</a></h2>
+<p>Detct HTML5/CSS3 Features in the current Browser</p>
+<p>Feature Detection over User Agent Sniffing</p>
+</section>
+<section>
+<h2>The "Shims"</h2>
+<p>Make Older Browsers Do New Things</p>
+<ul>
+  <li><a href="https://github.com/aFarkas/html5shiv">HTML5shiv</a> - Make Older Browsers provide default styling for HTML5 semantic elements</li>
+  <li><a href="https://github.com/scottjehl/Respond">Respond.js</a> - Make IE8 & Earlier understand media queries</li>
+  <li><a href="http://selectivizr.com/">Selectivzr</a> - Make older browsers understand many CSS3 pseudo-classes</li>
+</ul>
+</section>
+<section>
+  <h2>Better Icons Through CSS3</h2>
+  <ul>
+    <li><a href="http://fontawesome.io/">Font Awesome</a></li>
+    <li>A Bootstrap project</li>
+    <li>Infinitely resizable icons</li>
+  </ul>
+</section>
+<section>
+<h2><a href="http://bower.io/">Bower</a></h2>
+<p class="fragment">Like all the previous tools?</p>
+<p class="fragment">Manage all of the above through the command line </p>
+<p class="fragment">Requires a functional <a href="http://nodejs.org/">node.js</a> environment</p>
+</section>
+<section data-markdown>
+<script type="text/template">
+  ```
+  /* bower.json file */
+  /* just run > bower install */
+{
+  "name": "zengrids",
+  "version": "0.0.1",
+  "authors": [
+    "Kevin Reiss <kevin.reiss@gmail.com>"
+  ],
+  "description": "Zengrids test",
+  "keywords": [
+    "zengrids",
+    "test"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "html5shiv": "~3.7.0",
+    "modernizr": "~2.6.2",
+    "respond": "~1.3.0",
+    "normalize-css": "~2.1.3",
+    "font-awesome": "~3.2.1"
+  }
+}
+```
+</script>
+</section>
+
+<section data-markdown>
+## CSS Pre-Processors
+
+1. Compile your CSS automatically
+2. [SASS](http://sass-lang.com/) 
+3. [Less](http://lesscss.org/)
+4. Just use one or the other
+5. I'll talk about SASS
+</section>
+<section>
+<h2>You Will Need A Functional Ruby Environment</h2>
+<p class="fragmemt">Sass is a ruby gem</p>
+<p class="fragment">&gt; gem install sass</p>
+</section>
+<section>
+<h2>SASS Features</h2>
+<ul>
+  <li class="fragment">Variables</li>
+  <li class="fragment">Functions - built-in helpers for common CSS tasks</li>
+  <li class="fragment">Nesting Groups of Selectors</li>
+  <li class="fragment">Reusable Components of CSS - Mixins</li>
+  <li class="fragment">Low learning curve - Syntax is very similar to CSS</li>
+  <li class="fragment">.scss file extension</li>
+</ul>
+</section>
+<section>
+<h2>SASS Benefits</h2>
+<h3>Four big wins</h3>
+  <ol>
+    <li class="fragment">Large projects become more maintainable and readable</li>
+    <li class="fragment">Re-use of CSS can go beyond copy and paste</li>
+    <li class="fragment">Repetitive and verbose tasks become simple (think image sprites)</li>
+    <li class="fragment">Leverage the power of a full programming language to manage grids and breakpoint calculations</li>
+  </ol>
+  </section>
+  <section>
+  <h2><a href="http://compass-style.org/">Compass - An Essentail Sass Development Tool</a></h2>
+  <ul>
+    <li class="fragment">Compass is also a ruby gem. See config.rb in a SASS project directory</li>
+    <li class="fragment"> &gt; gem install compass</li>
+    <li class="fragment">Compass compiles your SASS to CSS for use in the browser</li>
+    <li class="fragment">Provides many extensions for common styling, typography, and CSS features</li>
+    <li class="fragment">Never write a vendor prefix (webkit-,-ms, etc.) again </li>
+  </section>
+<section>
+<h2>Using Sass with <a href="http://zengrids.com/">Zen Grids</a></h2>
+<ul>
+  <li class="fragment">Zen-grids is a compass extension and a Ruby Gem</li>
+  <li class="fragment"> &gt; gem install zen-grids</li>
+  <li class="fragment">It allows you to define complex, "semantic" grids</li>
+  <li class="fragment"><a href="http://zengrids.com/help/#example-1">Some Examples</a></p>
+  <li class="fragment">When integrated with the <a href="http://breakpoint-sass.com/">breakpoint compass extension</a> it can easily support complex media queries.</li>
+</ul>
+</section>
+<section>
+<h2>Set up your SASS project directory</h2>
+<p class="fragment">&gt; compass create (my project name)</p>
+<p class="fragment">Review the config.rb file</p>
+<p class="fragment">Add Zen-grids, breakpoint, and other extensions</p>
+</section>
+<section data-markdown>
+<script type="text/template">
+  ```
+  # compass extensions
+require 'zen-grids'
+require 'breakpoint'
+require 'sassy-buttons'
+
+
+# Set this to the root of your project when deployed:
+http_path = "/zengrids/"
+css_dir = "stylesheets"
+sass_dir = "sass"
+images_dir = "images"
+javascripts_dir = "javascripts"
+
+# You can select your preferred output style here (can be overridden via the command line):
+# output_style = :expanded or :nested or :compact or :compressed
+
+# To enable relative paths to assets via compass helper functions. Uncomment:
+relative_assets = true
+
+  ```
+</script>
+</section>
+<section>
+<h2>Zen Grids Example</h2>
+<ul>
+  <li class="fragment"><a href="http://localhost/zengrids/public/index.html">Barebones HTML Example</a></li>
+  <li class="fragment">Include the mixims for zen-grids and breakpoint</li>
+  <li class="fragment">Let's define our grid</li>
+  <li class="fragment">Have Compass watch our sass directory</li>
+  <li class="fragment">CSS will be compiled on the fly</li>
+  <li class="fragment">Let's define our breakpoints</li>
+</uL> 
+</section>
+<section>
+<h2>Add Another Library: Buttons</h2>
+<ol>
+  <li class="fragment">&gt; gem install <a href="http://jaredhardy.com/sassy-buttons/">sassy-buttons</a></li>
+  <li class="fragment">Example the partial file - _sassybuttons.scss</li>
+  <li class="fragment">Define some of our own buttons in style.scss</li>
+</ol>
+</section>
+<section>
+<h2>Responsive Support in Tools We Use</h2>
+</section>
+<section>
+<h2>Wordpress</h2>
+<ul>
+  <li class="fragment">Now <a href="http://twentythirteendemo.wordpress.com/">2013 theme</a> ships with responsive baked in.</li>
+  <li class="fragment"><a href="http://wp.tutsplus.com/tutorials/creative-coding/cross-platform-sass-and-compass-in-wordpress/">Using Sass and Compass with Wordpress.</a></li>
+</ul>
+</section>
+
+<section data-markdown>
+## Drupal Responsvie Themes
+  * [Zen](http://drupal.org/project/zen)
+  * [Omega](http://drupal.org/project/omega)
+  * [Bootstrap for Drupal](http://drupal.org/project/bootstrap)
+  </section>
+</section>
+<section>
+<section data-markdown>
+          ## Responsive Use Cases in Libraries
+1. [Northeastern Search](http://onesearch.northeastern.edu/primo_library/libweb/action/dlSearch.do?dscnt=1&onCampus=true&primoQueryTemp=wild+sheep+chase&op=Search&query=any%2Ccontains%2Cwild+sheep+chase&displayMode=full&dstmp=1381375475096&search_scope=everything_scope&group=GUEST&vid=NU&institution=NEU&fromLogin=true) 
+2. [Princeton Library](http://library.princeton.edu)
+3. [Link Resolver](http://findit.library.jhu.edu/go/24972981)
+</section>
+<section data-markdown>
+## Are we ahead of our audience? 
+  * Only 5% of our current Princeton Library traffic is from mobile users today
+  * Remember: **Be Future friendly**
+  * Can you afford to miss out on hundreds of millions of new smartphone users a year?
+  </section>
+  </section>
+  <section>
+  <section data-markdown>
+  ##Some More Opinions about Responsive Design
+
+  * [Sam Richard](http://snugug.com/presentations)
+  * [Team Sass](https://github.com/Team-Sass)
+  * [John Albin - Drupal 8 Mobile Initiative Lead and Author of Zen Theme](https://www.lullabot.com/who-we-are/john-albin-wilkins)
+  </section>
+  <section data-markdown>
+  ###Some More Reading
+
+  * [Designing For the Web](http://designingfortheweb.co.uk/)
+  * [CSS3: The Manual](http://www.amazon.com/CSS3-Missing-David-Sawyer-McFarland/dp/1449325947)
+  * And listening, [The Web Ahead](http://5by5.tv/webahead)
+  </section>
+  <section data-markdown>
+  ### Conferences
+  * Almost any mobile/responsive talk at recent Drupalcons
+  * [Sass Conf](http://sassconf.com/)
+  </section>
+  <section>
+  <p>And if you really want to get ahead, read about <a href="http://www.w3.org/TR/2013/WD-components-intro-20130606/">web components</a>.</p>
+  </section>
+
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
